@@ -1,0 +1,36 @@
+{
+  "name": "sportseye-backend",
+  "version": "1.0.0",
+  "description": "Backend for SportsEye",
+  "devDependencies": {
+    "aws-sdk": "^2.381.0",
+    "claudia": "^5.2.0",
+    "claudia-api-builder": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "eslint": "^6.7.2",
+    "jsonwebtoken": "^8.4.0",
+    "jwks-rsa": "^1.3.0",
+    "ms": "^2.1.1"
+  },
+  "scripts": {
+    "dynamo:write:dev": "DOTENV_CONFIG=./scripts/env/dev.env node ./scripts/uploadData.js",
+    "dynamo:write:test": "DOTENV_CONFIG=./scripts/env/test.env node ./scripts/uploadData.js",
+    "dynamo:write:prod": "DOTENV_CONFIG=./scripts/env/prod.env node ./scripts/uploadData.js",
+    "claudia:create:dev": "./node_modules/claudia/bin/cmd.js create --region ap-southeast-2 --api-module lambda/index --use-local-dependencies --set-env-from-json lambda/env/dev.json --version dev --config claudia.dev.json --name sportseye-backend-dev",
+    "claudia:update:dev": "./node_modules/claudia/bin/cmd.js update --use-local-dependencies --set-env-from-json lambda/env/dev.json --version dev --config claudia.dev.json --runtime nodejs12.x",
+    "claudia:create:test": "./node_modules/claudia/bin/cmd.js create --region ap-southeast-2 --api-module lambda/index --use-local-dependencies --set-env-from-json lambda/env/test.json --version test --config claudia.test.json --name sportseye-backend-test",
+    "claudia:update:test": "./node_modules/claudia/bin/cmd.js update --use-local-dependencies --set-env-from-json lambda/env/test.json --version test --config claudia.test.json --runtime nodejs12.x",
+    "claudia:create:prod": "./node_modules/claudia/bin/cmd.js create --region ap-southeast-2 --api-module lambda/index --use-local-dependencies --set-env-from-json lambda/env/prod.json --version prod --config claudia.prod.json --name sportseye-backend-prod",
+    "claudia:update:prod": "./node_modules/claudia/bin/cmd.js update --use-local-dependencies --set-env-from-json lambda/env/prod.json --version prod --config claudia.prod.json --runtime nodejs12.x",
+    "claudia:create:ukprod": "./node_modules/claudia/bin/cmd.js create --region ap-southeast-2 --api-module lambda/index --use-local-dependencies --set-env-from-json lambda/env/ukprod.json --version prod --config claudia.ukprod.json --name uk-sportseye-backend-prod --runtime nodejs12.x",
+    "claudia:update:ukprod": "./node_modules/claudia/bin/cmd.js update --use-local-dependencies --set-env-from-json lambda/env/ukprod.json --version dev --config claudia.ukprod.json --runtime nodejs12.x",
+    "claudia:create:uktesting": "./node_modules/claudia/bin/cmd.js create --region ap-southeast-2 --api-module lambda/index --use-local-dependencies --set-env-from-json lambda/env/uktesting.json --version prod --config claudia.uktesting.json --name sportseye-backend-uktesting --runtime nodejs12.x",
+    "claudia:update:uktesting": "./node_modules/claudia/bin/cmd.js update --use-local-dependencies --set-env-from-json lambda/env/uktesting.json --version prod --config claudia.uktesting.json --runtime nodejs12.x"
+  },
+  "author": "Richard Law",
+  "license": "ISC",
+  "dependencies": {
+    "csv-stringify": "^5.5.0",
+    "pg": "^7.14.0"
+  }
+}

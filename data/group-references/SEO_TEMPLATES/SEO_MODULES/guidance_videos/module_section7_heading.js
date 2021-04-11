@@ -1,0 +1,5 @@
+// SEO TEMPLATE
+
+module.exports = `
+INFRASTRUCTURE & ACTION PLANS
+`

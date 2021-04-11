@@ -1,0 +1,5 @@
+// SEO TEMPLATE
+
+module.exports = `
+LOCAL GOVERNMENT MEETINGS
+`

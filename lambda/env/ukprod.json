@@ -1,0 +1,14 @@
+{
+  "IAM_ACCESS_KEY": "AKIAIKUZZNIXMTBV6VRA",
+  "IAM_SECRET_KEY": "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",
+  "JWKS_URI": "https://active-xchange.au.auth0.com/.well-known/jwks.json",
+  "KID": "NTJBRDE4MzlFNjgzMzcyNUY2NkFFRjAwMTI4QkVBMDEzNjdGNjU0Ng",
+  "DB_AWS_REGION": "ap-southeast-2",
+  "DB_TABLE": "groups-prod",
+  "DB_TABLE_commented_out": "groups-test",
+  "PGUSER": "activexchange",
+  "PGHOST": "activexchange-prod.ctwqmpbtmnyy.ap-southeast-2.rds.amazonaws.com",
+  "PGPASSWORD": "G3T4CTIV3",
+  "PGDATABASE": "postgres",
+  "PGPORT": "5432"
+}

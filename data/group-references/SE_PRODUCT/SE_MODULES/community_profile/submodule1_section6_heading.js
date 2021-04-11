@@ -1,0 +1,5 @@
+// SEO TEMPLATE
+
+module.exports = `
+6. NEED ASSISTANCE (DISABILITY)
+`

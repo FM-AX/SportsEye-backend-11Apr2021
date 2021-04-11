@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "uk-sportseye-backend-prod-executor",
+    "name": "uk-sportseye-backend-prod",
+    "region": "ap-southeast-2"
+  },
+  "api": {
+    "id": "7uas8t2a8g",
+    "module": "lambda/index"
+  }
+}

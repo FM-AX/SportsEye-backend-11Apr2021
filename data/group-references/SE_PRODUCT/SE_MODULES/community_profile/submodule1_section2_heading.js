@@ -1,0 +1,5 @@
+// SEO TEMPLATE
+
+module.exports = `
+2. INDIGENOUS POPULATION
+`
